@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="property">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="apartament">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="area"/>
+              <xs:element type="xs:string" name="street"/>
+              <xs:element type="xs:int" name="bedrooms"/>
+              <xs:element type="xs:string" name="type"/>
+              <xs:element type="xs:int" name="price"/>
+              <xs:element type="xs:double" name="apartCode"/>
+            </xs:sequence>
+            <xs:attribute type="xs:double" name="code" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

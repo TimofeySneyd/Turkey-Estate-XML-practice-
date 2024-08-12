@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+    <property>
+        <apartament code="253-09">
+            <area>Alanya</area>
+            <street>Rodu</street>
+            <bedrooms>2</bedrooms>
+            <type>rent</type>
+            <price>80000</price>
+            <apartCode>253-09</apartCode>
+        </apartament>
+        <apartament code="116-09">
+            <area>Alanya</area>
+            <street>Aspendos</street>
+            <bedrooms>3</bedrooms>
+            <type>sale</type>
+            <price>115000</price>
+            <apartCode>116-09</apartCode>
+        </apartament>
+        <apartament code="392-11">
+            <area>Ankara</area>
+            <street>Central Street</street>
+            <bedrooms>1</bedrooms>
+            <type>rent</type>
+            <price>300</price>
+            <apartCode>392-11</apartCode>
+        </apartament>
+        <apartament code="283-09">
+            <area>Alanya</area>
+            <street>Georgia Street</street>
+            <bedrooms>2</bedrooms>
+            <type>rent</type>
+            <price>520</price>     
+            <apartCode>283-09</apartCode>     
+        </apartament>
+        <apartament code="187-09">
+            <area>Alanya</area>
+            <street>Youth Street</street>
+            <bedrooms>3</bedrooms>
+            <type>rent</type>
+            <price>800</price>     
+            <apartCode>187-09</apartCode>      
+        </apartament>
+    <apartament code="893-11">
+            <area>Ankara</area>
+            <street>Ikiros</street>
+            <bedrooms>2</bedrooms>
+            <type>sale</type>
+            <price>100000</price>   
+            <apartCode>893-11</apartCode>         
+        </apartament>
+        <apartament code="777-09">
+            <area>Alanya</area>
+            <street>Muso 12</street>
+            <bedrooms>1</bedrooms>
+            <type>rent</type>
+            <price>280</price> 
+            <apartCode>777-09</apartCode>           
+        </apartament>
+        <apartament code="811-09">
+            <area>Alanya</area>
+            <street>Peros 93</street>
+            <bedrooms>2</bedrooms>
+            <type>sale</type>
+            <price>88000</price> 
+            <apartCode>811-09</apartCode>           
+        </apartament>
+        <apartament code="172-09">
+            <area>Alanya</area>
+            <street>Jero 99</street>
+            <bedrooms>4</bedrooms>
+            <type>rent</type>
+            <price>1100</price>  
+            <apartCode>172-09</apartCode>          
+        </apartament>
+         <apartament code="482-09">
+            <area>Alanya</area>
+            <street>Derickson</street>
+            <bedrooms>2</bedrooms>
+            <type>sale</type>
+            <price>90000</price>   
+            <apartCode>482-09</apartCode>         
+        </apartament>
+    </property>

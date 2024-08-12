@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <link rel="javascript" href="external.js">
+    </head>
+    <body>
+        <h1>P O M P E Y</h1>
+        <hr>
+        <nav>		
+            <div class="navagation" id="navigationIcon">
+            <!-- Navigation example -->
+                <ul>
+                    <a href="index.html">HOME</a>
+            <a href="index2.html">BOOKING</a>
+            <a href="index3.html">SEARCH PROPERTY</a>	
+            <a href="index4.html">EXPLORE</a>				
+                </ul>
+            </div> 
+           
+        </nav>
+    <hr>
+<h2 class="page3">In this section you can search for specific details of apartaments, down below you will see a filtered content of available property
+</h2>
+<input type="text" id="myInput" onkeyup="myFunctionSearch()"  placeholder="Search for names.." title="Type in a name">
+<!--putting xml data in a table-->
+<table id="myTable">
+    <tr><th>Area</th><th>Street</th>
+        <th>Bedrooms</th><th>Type</th>
+        <th>Price</th><th>apartCode</th>
+    </tr>`;
+</table>
+
+<script>
+    //importing xml information through XMLHttpRequest without events 
+    // or actions such as "onclick" etc
+   if (window.XMLHttpRequest)
+            {// XMLHttpRequest for new browsers 
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {           //xmlhttp request to connect to xml server and active event listener
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }   //parsing XML with DOMParser
+            xmlhttp.onload = function() {
+                var xmlDoc = new DOMParser().parseFromString(xmlhttp.responseText,'text/xml');
+
+                console.log(xmlDoc);
+
+                document.write("<table border='0'>");
+                    // displayable xml information in a table format from children
+                    // elements(apartament) of the root(property)
+                var x=xmlDoc.getElementsByTagName("apartament");
+                for (i=0;i<x.length;i++){
+            document.write("<tr><td>");
+            document.write(x[i].getElementsByTagName("area")[0].childNodes[0].nodeValue);
+            document.write("</td><td>");
+                document.write("<td><td>");
+            document.write(x[i].getElementsByTagName("street")[0].childNodes[0].nodeValue);
+            document.write("</td><td>");
+                document.write("<td><td>");         //spacing in the table
+            document.write(x[i].getElementsByTagName("bedrooms")[0].childNodes[0].nodeValue);
+            document.write("</td><td>");document.write("</td><td>");
+                document.write("</td><td>");document.write("</td><td>");document.write("</td><td>");
+                document.write("<td><td>");         //more spacing
+            document.write(x[i].getElementsByTagName("type")[0].childNodes[0].nodeValue);
+            document.write("</td><td>");
+                document.write("<td><td>");
+                document.write("<td><td>");
+            document.write(x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue);
+            document.write("</td><td>");
+                document.write("<td><td>");
+                document.write("<td><td>");
+            document.write(x[i].getElementsByTagName("apartCode")[0].childNodes[0].nodeValue);
+            document.write("</td><td>");
+                }
+                document.write("</table>");
+
+            }
+            xmlhttp.open("GET","property.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML; 
+//not finished search field to check property from xml file by apartament id/code
+//did research but could not find a way how to connect js filtering & search functions with xml
+// table content, as it can be seen js ignores XML content in the table if enter code of apartamment
+function myFunction1(){
+  
+let filter = document.getElementById('myInput').value;
+let myTable = document.getElementById('myTable');
+let tr = myTable.getElementsByTagName('tr');
+for(var i=0; i<tr.length; i++)
+{
+  let td = tr[i].getElementsByTagName('td')[0];
+  if(td)
+  {
+    let textValue = td.textContent || td.innerHTML;
+   if(textValue >= +filter  )
+   {
+     tr[i].style.display = "";
+   }
+   else 
+   {
+     tr[i].style.display = "none";
+   }
+  }
+}
+
+}
+</script>
+<br><br>
+
+</body>
+
+</html>

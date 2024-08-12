@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <link rel="javascript" href="external.js">
+    </head>
+    <body>
+        
+        <h1>P O M P E Y</h1>
+        <hr>
+        <script> 	
+        //validation of entered data for appointment
+			function checkup(){
+			var dataStorage = []; 
+			dataStorage[0] = document.getElementById("infornationOfMessage").value; 			
+			dataStorage[1] = document.getElementById("infornationOfEmail").value; 
+			dataStorage[2] = document.getElementById("infornationOfName").value; 			
+			
+			if(dataStorage[0].length <2){
+				document.getElementById("feedback").innerHTML = "";
+			}
+			
+			var symbol = dataStorage[1].indexOf('@');
+			if(symbol < 1){
+				document.getElementById("emailFeedback").innerHTML = "Not A Valid Email";
+			}
+			
+			if(dataStorage[2].length <2){
+				document.getElementById("feedback").innerHTML = "Not A Valid Name";
+			}
+			
+			}
+	
+		</script>
+        <nav>		
+            <div class="navagation" id="navigationIcon">
+            
+                
+                 <!-- Navigation example -->
+                <ul>
+                    <a href="index.html">HOME</a>
+                    <a href="index2.html">BOOKING</a>
+                    <a href="index3.html">SEARCH PROPERTY</a>	
+                    <a href="index4.html">EXPLORE</a>					
+                </ul>
+            </div> 
+            
+        </nav>
+    <hr>
+<h2 class="page2">Book a meeting appointment with us today by filing in an applicaiton form with your details and we will
+    reply with 24/7 customer service hotline back to you to organise an overview of an apartament
+</h2>
+<section>
+    <h1 class="headerofapplysection">Appointment Section<h1>
+    <p class="headerparagraphappysection">In Order To Make an Appointment with one of our agents, You Are Required To Enter The Information below.<p>
+    <form class="formofapplysection">
+        <hr>
+        <label class="label4">Enter your name:</label>
+        <br/>
+        <input type="text" id="infornationOfName">
+        <p id="feedback"> </p>
+        
+        <label class="label4">Enter your email:</label>
+        <br/>
+        <input type="text" id="infornationOfEmail">
+        <p id="emailFeedback"></p>
+        
+        <div>
+        <label class="label4">Enter apartament code:</label>
+        <br/>
+        <textarea name="messageBox" id="infornationOfMessage" ></textarea>
+        </div>
+        
+        <input type="button" value="submit" onclick="checkup()">
+    </form>
+</section>
+<hr>
+
+</body>
+
+</html>
